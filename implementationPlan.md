@@ -151,7 +151,7 @@ Build a sleek, premium, Groww-branded single-page interface with visual citation
 ### Step 6.1: Sleek Conversational Layout
 *   Design a responsive chat interface using pure HTML5 and Vanilla CSS.
 *   Incorporate Groww's signature palette (sleek dark modes, deep gradients, clear typography, and subtle micro-animations).
-*   Add a prominent, persistent **Facts-Only Disclaimer** and pre-configured **Example Question bubbles** matching the 9 MF query types and stock parameters.
+*   Add a prominent, persistent **Facts-Only Disclaimer** and pre-configured **Example Question bubbles** matching the 11 MF query types and stock parameters.
 
 ### Step 6.2: Citation Badge Parser
 *   Write a Vanilla JS parsing function that scans incoming chat text for `[Source: ...]` patterns.
@@ -170,7 +170,7 @@ Verify the complete assembly against all defined success criteria.
 *   Write tests to verify deflection rates on advisory stock/fund questions.
 
 ### Step 7.2: RAG Accuracy & Citation Audits
-*   Test factual queries matching each of the **9 mutual fund query types** and the **5 stock profiles**.
+*   Test factual queries matching each of the **11 mutual fund query types** and the **5 stock profiles**.
 *   Manually audit the outputs, checking that:
     1.  The facts output by the LLM (Groq) are completely identical to the source data in `corpus.json`.
     2.  Hallucination temperature limits (e.g., setting Groq temperature parameter to `0.0`) are completely enforced.
