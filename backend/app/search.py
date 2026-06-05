@@ -12,6 +12,19 @@ logger = logging.getLogger(__name__)
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
 EMBED_MODEL = "nomic-embed-text"
 
+ENTITY_KEYWORDS = {
+    "Axis Bluechip Fund": ["axis bluechip", "bluechip"],
+    "Axis Long Term Equity Fund": ["axis long term", "long term equity", "elss"],
+    "Parag Parikh Flexi Cap Fund": ["parag parikh", "ppfas", "flexi cap", "flexicap"],
+    "Groww Large Cap Fund": ["groww", "groww large cap", "groww large cap fund"],
+    "General Mutual Fund": ["general", "faq", "statement", "capital gains", "download", "objectives", "category", "elss", "exit load", "sip", "benchmark", "riskometer"],
+    "Max Financial Services Ltd": ["max financial", "max", "mfs"],
+    "AU Small Finance Bank Ltd": ["au small", "au bank", "au small finance"],
+    "The Federal Bank Ltd": ["federal", "federal bank"],
+    "Glenmark Pharmaceuticals Ltd": ["glenmark", "glenmark pharma", "pharmaceuticals"],
+    "Indian Bank": ["indian bank", "indian"]
+}
+
 
 def get_embedding(text: str, model: str = EMBED_MODEL) -> list:
     """
@@ -22,7 +35,7 @@ def get_embedding(text: str, model: str = EMBED_MODEL) -> list:
         response = requests.post(
             f"{OLLAMA_URL}/api/embeddings",
             json={"model": model, "prompt": text},
-            timeout=10.0
+            timeout=0.5
         )
         if response.status_code == 200:
             return response.json()["embedding"]
@@ -33,7 +46,7 @@ def get_embedding(text: str, model: str = EMBED_MODEL) -> list:
         response = requests.post(
             f"{OLLAMA_URL}/api/embed",
             json={"model": model, "input": text},
-            timeout=10.0
+            timeout=0.5
         )
         if response.status_code == 200:
             return response.json()["embeddings"][0]
@@ -150,9 +163,78 @@ class SimilarityIndex:
         import gc
         gc.collect()
 
+    def keyword_search(self, query: str, top_k: int = 3) -> list[dict]:
+        """
+        Pure Python fallback keyword search when vector search returns low similarity or fails.
+        """
+        query_lower = query.lower()
+        
+        # Tokenize query: remove punctuation and split into words
+        query_words = set(re.findall(r"\w+", query_lower))
+        stop_words = {
+            "what", "is", "the", "of", "in", "for", "does", "have", "any", "how", "can", "i", 
+            "download", "a", "an", "to", "on", "at", "about", "with", "by", "scheme", "fund"
+        }
+        query_keywords = query_words - stop_words
+        if not query_keywords:
+            query_keywords = query_words
+            
+        # Determine which entities are mentioned in the query
+        matched_entities_in_query = []
+        for entity_name, keywords in ENTITY_KEYWORDS.items():
+            for kw in keywords:
+                pattern = rf"\b{kw}\b" if len(kw) <= 6 else kw
+                if re.search(pattern, query_lower):
+                    matched_entities_in_query.append(entity_name)
+                    break
+            
+        scored_chunks = []
+        for chunk in self.corpus:
+            content_lower = chunk["content"].lower()
+            score = 0
+            
+            # 1. Overlap of query keywords with chunk content
+            for kw in query_keywords:
+                if kw in content_lower:
+                    score += 1.0
+                    
+            # 2. Match with the entity in query (boost score)
+            entity = chunk.get("scheme_name") or chunk.get("stock_name")
+            if entity and entity in matched_entities_in_query:
+                score += 5.0
+                    
+            # 3. Match query type (boost score)
+            qtype = chunk.get("query_type")
+            if qtype:
+                qtype_keywords = qtype.replace("_", " ").split()
+                if any(w in query_lower for w in qtype_keywords):
+                    score += 3.0
+                    
+            if score > 0:
+                scored_chunks.append((score, chunk))
+                
+        scored_chunks.sort(key=lambda x: x[0], reverse=True)
+        
+        results = []
+        for score, chunk in scored_chunks:
+            retrieved_entity = chunk.get("scheme_name") or chunk.get("stock_name")
+            # Entity boundary filtering: if any entities are mentioned in the query,
+            # only return chunks matching those entities.
+            if matched_entities_in_query and retrieved_entity not in matched_entities_in_query:
+                continue
+                
+            chunk_copy = chunk.copy()
+            chunk_copy["similarity_score"] = float(score)
+            results.append(chunk_copy)
+            if len(results) >= top_k:
+                break
+                
+        return results
+
     def search(self, query: str, top_k: int = 3) -> tuple[list[dict], bool]:
         """
-        Retrieves the top_k matching chunks for the query.
+        Retrieves the top_k matching chunks for the query using semantic search,
+        falling back to keyword search if vector similarity is low or Ollama is offline.
         Returns a tuple: (list_of_chunks, is_deflected)
         """
         query_lower = query.lower()
@@ -169,79 +251,71 @@ class SimilarityIndex:
                 logger.info(f"Out-of-corpus entity keyword '{ooc}' detected. Deflecting.")
                 return [], True
 
-        if not self.corpus or self.normalized_matrix is None or len(self.normalized_matrix) == 0:
+        if not self.corpus:
             return [], True
 
-        # 2. Get embedding for the query
-        try:
-            query_vector = np.array(get_embedding(query))
-        except Exception as e:
-            logger.error(f"Error during query vectorization: {e}")
-            return [], True
-
-        query_norm = np.linalg.norm(query_vector)
-        if query_norm > 0:
-            query_vector = query_vector / query_norm
-        else:
-            return [], True
-
-        # 3. Calculate cosine similarity (dot product of normalized vectors)
-        similarities = np.dot(self.normalized_matrix, query_vector)
-
-        # 4. Sort similarities in descending order
-        top_indices = np.argsort(similarities)[::-1]
-
-        # 5. Check if the absolute top match is below threshold
-        if len(similarities) == 0 or similarities[top_indices[0]] < self.threshold:
-            logger.info(f"Top similarity score {similarities[top_indices[0]] if len(similarities) > 0 else 0} is below threshold {self.threshold}. Deflecting.")
-            return [], True
-
-        # 6. Entity alignment verification
-        entity_keywords = {
-            "Axis Bluechip Fund": ["axis bluechip", "bluechip"],
-            "Axis Long Term Equity Fund": ["axis long term", "long term equity", "elss"],
-            "Parag Parikh Flexi Cap Fund": ["parag parikh", "ppfas", "flexi cap", "flexicap"],
-            "Groww Large Cap Fund": ["groww", "groww large cap", "groww large cap fund"],
-            "General Mutual Fund": ["general", "faq", "statement", "capital gains", "download", "objectives", "category", "elss", "exit load", "sip", "benchmark", "riskometer"],
-            "Max Financial Services Ltd": ["max financial", "max", "mfs"],
-            "AU Small Finance Bank Ltd": ["au small", "au bank", "au small finance"],
-            "The Federal Bank Ltd": ["federal", "federal bank"],
-            "Glenmark Pharmaceuticals Ltd": ["glenmark", "glenmark pharma", "pharmaceuticals"],
-            "Indian Bank": ["indian bank", "indian"]
-        }
-
-        matched_entities_in_query = []
-        for entity_name, keywords in entity_keywords.items():
-            for kw in keywords:
-                pattern = rf"\b{kw}\b" if len(kw) <= 6 else kw
-                if re.search(pattern, query_lower):
-                    matched_entities_in_query.append(entity_name)
-                    break
-
+        # 2. Try Vector Semantic Search
+        vector_run_success = False
+        vector_above_threshold = False
         aligned_chunks = []
-        for idx in top_indices:
-            score = similarities[idx]
-            if score < self.threshold:
-                continue
+        
+        if self.normalized_matrix is not None and len(self.normalized_matrix) > 0:
+            try:
+                query_vector = np.array(get_embedding(query))
+                query_norm = np.linalg.norm(query_vector)
+                
+                if query_norm > 0:
+                    query_vector = query_vector / query_norm
+                    similarities = np.dot(self.normalized_matrix, query_vector)
+                    top_indices = np.argsort(similarities)[::-1]
+                    
+                    if len(similarities) > 0:
+                        vector_run_success = True
+                        max_score = similarities[top_indices[0]]
+                        if max_score >= self.threshold:
+                            vector_above_threshold = True
+                            
+                            # Entity alignment check
+                            matched_entities_in_query = []
+                            for entity_name, keywords in ENTITY_KEYWORDS.items():
+                                for kw in keywords:
+                                    pattern = rf"\b{kw}\b" if len(kw) <= 6 else kw
+                                    if re.search(pattern, query_lower):
+                                        matched_entities_in_query.append(entity_name)
+                                        break
+                                        
+                            for idx in top_indices:
+                                score = similarities[idx]
+                                if score < self.threshold:
+                                    continue
+                                    
+                                chunk = self.corpus[idx]
+                                retrieved_entity = chunk.get("scheme_name") or chunk.get("stock_name")
+                                
+                                if matched_entities_in_query and retrieved_entity not in matched_entities_in_query:
+                                    logger.info(f"Entity mismatch: query mentions {matched_entities_in_query} but chunk is for '{retrieved_entity}'. Skipping.")
+                                    continue
+                                    
+                                chunk_copy = chunk.copy()
+                                chunk_copy["similarity_score"] = float(score)
+                                aligned_chunks.append(chunk_copy)
+                                
+                                if len(aligned_chunks) >= top_k:
+                                    break
+            except Exception as e:
+                logger.warning(f"Vector search failed or timed out: {e}. Falling back to keyword search.")
 
-            chunk = self.corpus[idx]
-            retrieved_entity = chunk.get("scheme_name") or chunk.get("stock_name")
-
-            # Entity boundary check: If query mentions one or more supported entities,
-            # the chunk's entity must match one of them.
-            if matched_entities_in_query and retrieved_entity not in matched_entities_in_query:
-                logger.info(f"Entity mismatch: query mentions {matched_entities_in_query} but chunk is for '{retrieved_entity}'. Skipping chunk.")
-                continue
-
-            chunk_copy = chunk.copy()
-            chunk_copy["similarity_score"] = float(score)
-            aligned_chunks.append(chunk_copy)
-
-            if len(aligned_chunks) >= top_k:
-                break
-
+        # 3. Fallback to Keyword Match Search if Vector Search failed / had low similarity
+        # We only fallback if vector search was NOT run successfully (e.g. Ollama offline),
+        # OR if vector search was run but the top match was below threshold.
+        # If vector search ran and found matches above threshold, but they were filtered out by entity mismatch,
+        # we deflect immediately to preserve entity boundary logic.
+        if not vector_run_success or not vector_above_threshold:
+            logger.info("Vector search was not successful (offline or low similarity). Triggering fallback keyword search...")
+            aligned_chunks = self.keyword_search(query, top_k)
+            
         if not aligned_chunks:
-            logger.info("All retrieved chunks filtered out due to entity alignment mismatch. Deflecting.")
+            logger.info("All search methods failed to find matches. Deflecting.")
             return [], True
 
         return aligned_chunks, False
