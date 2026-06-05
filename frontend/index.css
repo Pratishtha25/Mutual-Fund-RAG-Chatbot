@@ -888,6 +888,47 @@ body {
     padding: 8px;
 }
 
+/* Feed suggestions container and chips */
+.feed-suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 52px; /* Align with bubbles, accounting for avatar width (36px) + gap (16px) */
+    margin-top: -8px; /* Tighter vertical spacing right below response */
+    margin-bottom: 8px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.suggestion-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.suggestion-chip {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-dark);
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, transform 0.1s;
+    text-align: left;
+}
+
+.suggestion-chip:hover {
+    background-color: rgba(0, 230, 153, 0.02);
+    border-color: var(--mint-green);
+    color: var(--text-white);
+    transform: translateY(-1px);
+}
+
+.suggestion-chip:active {
+    transform: translateY(0);
+}
+
 /* Mobile responsive buttons and overlays hidden by default on desktop */
 .mobile-menu-btn {
     display: none;
@@ -1137,6 +1178,21 @@ body {
     /* Hide the bottom footer on mobile screens to save screen height */
     .workspace-footer {
         display: none !important;
+    }
+
+    .feed-suggestions {
+        margin-left: 46px; /* Match mobile chat row spacing */
+    }
+
+    .suggestion-chips {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .suggestion-chip {
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 12px;
     }
 }
 

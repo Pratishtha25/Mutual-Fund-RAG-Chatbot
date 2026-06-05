@@ -313,8 +313,58 @@ function appendLoadingIndicator() {
     return row;
 }
 
+// Appends suggestion chips under the latest response in the chat feed
+function appendSuggestions(excludeQuery) {
+    const allQuestions = [];
+    for (const category in PREDEFINED_QUESTIONS) {
+        PREDEFINED_QUESTIONS[category].forEach(item => {
+            allQuestions.push(item);
+        });
+    }
+
+    // Filter out the query that was just submitted to avoid recommending it again
+    const cleanExclude = excludeQuery.trim().toLowerCase();
+    const filtered = allQuestions.filter(item => {
+        const questionLower = item.question.toLowerCase();
+        return !questionLower.includes(cleanExclude) && !cleanExclude.includes(questionLower);
+    });
+
+    // Shuffle and pick up to 3 random suggestions
+    const shuffled = filtered.sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 3);
+
+    if (selected.length === 0) return;
+
+    const container = document.createElement("div");
+    container.className = "feed-suggestions";
+
+    const chipsDiv = document.createElement("div");
+    chipsDiv.className = "suggestion-chips";
+
+    selected.forEach(item => {
+        const chip = document.createElement("button");
+        chip.className = "suggestion-chip";
+        chip.textContent = item.label;
+        chip.setAttribute("data-question", item.question);
+        
+        chip.addEventListener("click", () => {
+            container.remove();
+            submitMessage(item.question);
+        });
+        
+        chipsDiv.appendChild(chip);
+    });
+
+    container.appendChild(chipsDiv);
+    chatFeed.appendChild(container);
+    chatFeed.scrollTop = chatFeed.scrollHeight;
+}
+
 // Orchestrates entire request-response flow to backend API
 async function submitMessage(query) {
+    // Remove all existing feed suggestions to keep the interface clean
+    document.querySelectorAll(".feed-suggestions").forEach(el => el.remove());
+
     chatInput.value = "";
 
     // Hide welcome cards on first user message submit
@@ -354,6 +404,7 @@ async function submitMessage(query) {
             </div>`;
             const finalHTML = highlightMetrics(escapeHTML(answer)) + "<br>" + metricsHTML;
             appendMessage("", false, finalHTML);
+            appendSuggestions(query);
         }, 600);
         return;
     }
@@ -381,6 +432,7 @@ async function submitMessage(query) {
             </div>`;
             const finalHTML = highlightMetrics(escapeHTML(answer)) + "<br>" + metricsHTML;
             appendMessage("", false, finalHTML);
+            appendSuggestions(query);
         }, 600);
         return;
     }
@@ -421,6 +473,7 @@ async function submitMessage(query) {
             </div>`;
             const finalHTML = highlightMetrics(escapeHTML(answer).replace(/\n/g, "<br>")) + "<br>" + metricsHTML;
             appendMessage("", false, finalHTML);
+            appendSuggestions(query);
         }, 700);
         return;
     }
@@ -523,11 +576,13 @@ async function submitMessage(query) {
         } else {
             appendMessage("The assistant is experiencing high traffic. Please try again shortly.", false);
         }
+        appendSuggestions(query);
     } catch (error) {
         console.error("Fetch error:", error);
         if (loader && loader.parentNode) {
             loader.parentNode.removeChild(loader);
         }
         appendMessage("Failed to connect to the Groww Assistant server. Please ensure the backend server is running on port 8001.", false);
+        appendSuggestions(query);
     }
 }
