@@ -1,6 +1,6 @@
 # Detailed RAG Architecture: Groww FAQ Assistant
 
-This document defines the comprehensive, detailed system architecture for the **Retrieval-Augmented Generation (RAG) based Groww FAQ Assistant**. The architecture bridges the factual Mutual Fund scheme queries (derived from [problemStatement.txt](file:///c:/Users/hp/Documents/Mutual%20Fund%20Chatbot/docs/problemStatement.txt)) and the **5 curated Groww stock URLs** (documented in [context.md](file:///c:/Users/hp/Documents/Mutual%20Fund%20Chatbot/context.md)).
+This document defines the comprehensive, detailed system architecture for the **Retrieval-Augmented Generation (RAG) based Groww FAQ Assistant**. The architecture bridges the factual Mutual Fund scheme queries (derived from [problemStatement.txt](file:///c:/Users/hp/Documents/Mutual%20Fund%20Chatbot/docs/problemStatement.txt)) and the **23 curated Groww stock/mutual fund URLs** (documented in [context.md](file:///c:/Users/hp/Documents/Mutual%20Fund%20Chatbot/context.md)).
 
 ---
 
@@ -73,8 +73,8 @@ flowchart LR
     E --> F[corpus.json & Cache]
 ```
 
-### 2.1 Ingestion Mapping for the 9 Mutual Fund Query Types
-During parsing, mutual fund documents are categorized into **nine (9) distinct query types** and tagged with metadata to enable highly precise matching during retrieval:
+### 2.1 Ingestion Mapping for the 11 Mutual Fund Query Types
+During parsing, mutual fund documents are categorized into **eleven (11) distinct query types** and tagged with metadata to enable highly precise matching during retrieval:
 
 1.  **Expense Ratio:** Extracted from the annual operating expenses tables in the SIDs/Factsheets.
 2.  **Exit Load:** Extracted from the "Load Structure" section of the scheme documents.
@@ -85,6 +85,8 @@ During parsing, mutual fund documents are categorized into **nine (9) distinct q
 7.  **Fund Management:** Extracted from AUM, fund asset size, and Asset Management Company (AMC) overview sections.
 8.  **Fund Manager Details:** Extracted from tables describing key personnel, listing names, tenures, qualifications, and educational credentials.
 9.  **Document Access:** Mapped to instructions and procedures for downloading official statements and scheme brochures.
+10. **Fund Category:** The classification of the fund based on its investment strategy and asset allocation (e.g., Equity: Large Cap).
+11. **Investment Objectives:** The financial goals and strategy of the scheme.
 
 ### 2.2 Ingestion Mapping for the 5 Curated Stocks
 Information is parsed from the 5 supported Groww Stock pages and structured into metrics:
@@ -195,7 +197,7 @@ sequenceDiagram
 ### 4.1 Similarity Engine Details
 *   **Distance Metric:** Cosine similarity computed locally via NumPy:
     $$\text{Similarity} = \frac{\vec{q} \cdot \vec{d}}{\|\vec{q}\| \|\vec{d}\|}$$
-*   **Vectorization:** Embeddings generated locally using `all-MiniLM-L6-v2` (80MB model running locally on CPU) via Python's `sentence-transformers` (100% free, no external API keys required).
+*   **Vectorization:** Embeddings generated locally using `nomic-embed-text` via the local Ollama embeddings API (100% free, runs entirely offline, requires no external API keys).
 
 ### 4.2 LLM System Prompt Instructions
 To guarantee **zero hallucinations** and enforce strict citations, the synthesizer feeds the LLM a structured prompt:
@@ -245,7 +247,7 @@ When the LLM outputs citations in the defined format, the **Groww Chat UI** pars
 | **Web Interface** | HTML5 / Vanilla CSS / ES6 JavaScript | Renders smoothly in any web framework, zero bundle size overhead, easy to embed as a chat widget. |
 | **Application API**| FastAPI (Python) | High-speed async routing, native support for Python NLP libraries, and clean automatic API documentation (OpenAPI). |
 | **Similarity Index**| Local NumPy / Vector Cache | With a combined corpus size of <1,000 chunks, a local in-memory cosine similarity matrix calculation is calculated in under 3ms, saving database maintenance costs. |
-| **Embeddings** | `all-MiniLM-L6-v2` (SentenceTransformers) | Small CPU-optimized model (80MB) that can run entirely offline/locally without API fees or network delays. |
+| **Embeddings** | `nomic-embed-text` (via Ollama) | Standard high-fidelity text embedding model running locally via Ollama, completely offline, zero latency, and zero cost. |
 | **Generative LLM** | **Ollama** running `qwen2.5:7b-instruct` (or `qwen2.5:1.5b-instruct` for low-resource environments) | 100% free and open-source, runs entirely locally on CPU/GPU, zero usage fees, requires no API keys or internet connection. |
 | **Background Scheduler**| **APScheduler** (Advanced Python Scheduler) | A lightweight, in-process Python library that schedules and executes periodic data synchronization and crawling tasks directly within the FastAPI thread pool. |
 
