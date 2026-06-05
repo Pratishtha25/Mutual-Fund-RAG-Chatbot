@@ -1,0 +1,530 @@
+[
+  {
+    "chunk_id": "stock_max-financial-services-ltd_metrics",
+    "type": "stock",
+    "query_type": "market_cap",
+    "stock_name": "Max Financial Services Ltd",
+    "content": "Max Financial Services Ltd exhibits a Market Capitalization of approximately ₹36,500 Crores with a P/E Ratio of 52.45 and a Dividend Yield of 0.00%.",
+    "source_metadata": {
+      "title": "Max Financial Services Ltd Stock Details",
+      "url": "https://groww.in/stocks/max-financial-services-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_max-financial-services-ltd_fifty_two_week",
+    "type": "stock",
+    "query_type": "fifty_two_week_high_low",
+    "stock_name": "Max Financial Services Ltd",
+    "content": "The 52-Week High / Low range for Max Financial Services Ltd is ₹1,150.00 / ₹780.00.",
+    "source_metadata": {
+      "title": "Max Financial Services Ltd Stock Details",
+      "url": "https://groww.in/stocks/max-financial-services-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_max-financial-services-ltd_industry",
+    "type": "stock",
+    "query_type": "industry_classification",
+    "stock_name": "Max Financial Services Ltd",
+    "content": "Max Financial Services Ltd is categorized under the 'Insurance' industry sector.",
+    "source_metadata": {
+      "title": "Max Financial Services Ltd Stock Details",
+      "url": "https://groww.in/stocks/max-financial-services-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_max-financial-services-ltd_overview",
+    "type": "stock",
+    "query_type": "company_overview",
+    "stock_name": "Max Financial Services Ltd",
+    "content": "About Max Financial Services Ltd (Company Overview): Max Financial Services Limited (MFSL) is the holding company for Max Life Insurance, India's largest non-bank private life insurer. MFSL is focused on growing and nurturing business investments in life insurance and providing administrative support.",
+    "source_metadata": {
+      "title": "Max Financial Services Ltd Stock Details",
+      "url": "https://groww.in/stocks/max-financial-services-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_max-financial-services-ltd_management",
+    "type": "stock",
+    "query_type": "company_management_data",
+    "stock_name": "Max Financial Services Ltd",
+    "content": "The corporate management and executive leadership team of Max Financial Services Ltd includes: Analjit Singh (Founder & Chairman), Mohit Talwar (Managing Director), Prashant Tripathy (CEO & Managing Director, Max Life).",
+    "source_metadata": {
+      "title": "Max Financial Services Ltd Stock Details",
+      "url": "https://groww.in/stocks/max-financial-services-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_au-small-finance-bank-ltd_metrics",
+    "type": "stock",
+    "query_type": "market_cap",
+    "stock_name": "AU Small Finance Bank Ltd",
+    "content": "AU Small Finance Bank Ltd exhibits a Market Capitalization of approximately ₹45,200 Crores with a P/E Ratio of 26.80 and a Dividend Yield of 0.25%.",
+    "source_metadata": {
+      "title": "AU Small Finance Bank Ltd Stock Details",
+      "url": "https://groww.in/stocks/au-small-finance-bank-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_au-small-finance-bank-ltd_fifty_two_week",
+    "type": "stock",
+    "query_type": "fifty_two_week_high_low",
+    "stock_name": "AU Small Finance Bank Ltd",
+    "content": "The 52-Week High / Low range for AU Small Finance Bank Ltd is ₹810.00 / ₹550.00.",
+    "source_metadata": {
+      "title": "AU Small Finance Bank Ltd Stock Details",
+      "url": "https://groww.in/stocks/au-small-finance-bank-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_au-small-finance-bank-ltd_industry",
+    "type": "stock",
+    "query_type": "industry_classification",
+    "stock_name": "AU Small Finance Bank Ltd",
+    "content": "AU Small Finance Bank Ltd is categorized under the 'Banking - Private Sector' industry sector.",
+    "source_metadata": {
+      "title": "AU Small Finance Bank Ltd Stock Details",
+      "url": "https://groww.in/stocks/au-small-finance-bank-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_au-small-finance-bank-ltd_overview",
+    "type": "stock",
+    "query_type": "company_overview",
+    "stock_name": "AU Small Finance Bank Ltd",
+    "content": "About AU Small Finance Bank Ltd (Company Overview): AU Small Finance Bank Limited is a retail-focused bank offering a range of banking and financial services. It transitioned from an asset finance NBFC to a small finance bank in 2017.",
+    "source_metadata": {
+      "title": "AU Small Finance Bank Ltd Stock Details",
+      "url": "https://groww.in/stocks/au-small-finance-bank-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_au-small-finance-bank-ltd_management",
+    "type": "stock",
+    "query_type": "company_management_data",
+    "stock_name": "AU Small Finance Bank Ltd",
+    "content": "The corporate management and executive leadership team of AU Small Finance Bank Ltd includes: Sanjay Agarwal (Managing Director & CEO), Uttam Tibrewal (Executive Director), Raj Vikash Verma (Part-time Chairman).",
+    "source_metadata": {
+      "title": "AU Small Finance Bank Ltd Stock Details",
+      "url": "https://groww.in/stocks/au-small-finance-bank-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_the-federal-bank-ltd_metrics",
+    "type": "stock",
+    "query_type": "market_cap",
+    "stock_name": "The Federal Bank Ltd",
+    "content": "The Federal Bank Ltd exhibits a Market Capitalization of approximately ₹38,400 Crores with a P/E Ratio of 11.50 and a Dividend Yield of 1.15%.",
+    "source_metadata": {
+      "title": "The Federal Bank Ltd Stock Details",
+      "url": "https://groww.in/stocks/the-federal-bank-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_the-federal-bank-ltd_fifty_two_week",
+    "type": "stock",
+    "query_type": "fifty_two_week_high_low",
+    "stock_name": "The Federal Bank Ltd",
+    "content": "The 52-Week High / Low range for The Federal Bank Ltd is ₹185.00 / ₹120.00.",
+    "source_metadata": {
+      "title": "The Federal Bank Ltd Stock Details",
+      "url": "https://groww.in/stocks/the-federal-bank-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_the-federal-bank-ltd_industry",
+    "type": "stock",
+    "query_type": "industry_classification",
+    "stock_name": "The Federal Bank Ltd",
+    "content": "The Federal Bank Ltd is categorized under the 'Banking - Private Sector' industry sector.",
+    "source_metadata": {
+      "title": "The Federal Bank Ltd Stock Details",
+      "url": "https://groww.in/stocks/the-federal-bank-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_the-federal-bank-ltd_overview",
+    "type": "stock",
+    "query_type": "company_overview",
+    "stock_name": "The Federal Bank Ltd",
+    "content": "About The Federal Bank Ltd (Company Overview): The Federal Bank Limited is a major Indian commercial bank in the private sector, headquartered in Aluva, Kerala. The bank has a strong presence in retail and corporate banking.",
+    "source_metadata": {
+      "title": "The Federal Bank Ltd Stock Details",
+      "url": "https://groww.in/stocks/the-federal-bank-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_the-federal-bank-ltd_management",
+    "type": "stock",
+    "query_type": "company_management_data",
+    "stock_name": "The Federal Bank Ltd",
+    "content": "The corporate management and executive leadership team of The Federal Bank Ltd includes: Shyam Srinivasan (Managing Director & CEO), Shalini Warrier (Executive Director), AP Hota (Chairman).",
+    "source_metadata": {
+      "title": "The Federal Bank Ltd Stock Details",
+      "url": "https://groww.in/stocks/the-federal-bank-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_glenmark-pharmaceuticals-ltd_metrics",
+    "type": "stock",
+    "query_type": "market_cap",
+    "stock_name": "Glenmark Pharmaceuticals Ltd",
+    "content": "Glenmark Pharmaceuticals Ltd exhibits a Market Capitalization of approximately ₹28,900 Crores with a P/E Ratio of 32.10 and a Dividend Yield of 0.30%.",
+    "source_metadata": {
+      "title": "Glenmark Pharmaceuticals Ltd Stock Details",
+      "url": "https://groww.in/stocks/glenmark-pharmaceuticals-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_glenmark-pharmaceuticals-ltd_fifty_two_week",
+    "type": "stock",
+    "query_type": "fifty_two_week_high_low",
+    "stock_name": "Glenmark Pharmaceuticals Ltd",
+    "content": "The 52-Week High / Low range for Glenmark Pharmaceuticals Ltd is ₹1,050.00 / ₹620.00.",
+    "source_metadata": {
+      "title": "Glenmark Pharmaceuticals Ltd Stock Details",
+      "url": "https://groww.in/stocks/glenmark-pharmaceuticals-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_glenmark-pharmaceuticals-ltd_industry",
+    "type": "stock",
+    "query_type": "industry_classification",
+    "stock_name": "Glenmark Pharmaceuticals Ltd",
+    "content": "Glenmark Pharmaceuticals Ltd is categorized under the 'Pharmaceuticals' industry sector.",
+    "source_metadata": {
+      "title": "Glenmark Pharmaceuticals Ltd Stock Details",
+      "url": "https://groww.in/stocks/glenmark-pharmaceuticals-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_glenmark-pharmaceuticals-ltd_overview",
+    "type": "stock",
+    "query_type": "company_overview",
+    "stock_name": "Glenmark Pharmaceuticals Ltd",
+    "content": "About Glenmark Pharmaceuticals Ltd (Company Overview): Glenmark Pharmaceuticals Limited is a research-led, global pharmaceutical company. It has presence across Generics, Specialty and OTC business with focus on oncology, dermatology and respiratory segments.",
+    "source_metadata": {
+      "title": "Glenmark Pharmaceuticals Ltd Stock Details",
+      "url": "https://groww.in/stocks/glenmark-pharmaceuticals-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_glenmark-pharmaceuticals-ltd_management",
+    "type": "stock",
+    "query_type": "company_management_data",
+    "stock_name": "Glenmark Pharmaceuticals Ltd",
+    "content": "The corporate management and executive leadership team of Glenmark Pharmaceuticals Ltd includes: Glenn Saldanha (Chairman & Managing Director), Cherylann Pinto (Executive Director), VS Mani (Executive Director & CFO).",
+    "source_metadata": {
+      "title": "Glenmark Pharmaceuticals Ltd Stock Details",
+      "url": "https://groww.in/stocks/glenmark-pharmaceuticals-ltd"
+    }
+  },
+  {
+    "chunk_id": "stock_indian-bank_metrics",
+    "type": "stock",
+    "query_type": "market_cap",
+    "stock_name": "Indian Bank",
+    "content": "Indian Bank exhibits a Market Capitalization of approximately ₹68,500 Crores with a P/E Ratio of 8.40 and a Dividend Yield of 2.50%.",
+    "source_metadata": {
+      "title": "Indian Bank Stock Details",
+      "url": "https://groww.in/stocks/indian-bank"
+    }
+  },
+  {
+    "chunk_id": "stock_indian-bank_fifty_two_week",
+    "type": "stock",
+    "query_type": "fifty_two_week_high_low",
+    "stock_name": "Indian Bank",
+    "content": "The 52-Week High / Low range for Indian Bank is ₹570.00 / ₹280.00.",
+    "source_metadata": {
+      "title": "Indian Bank Stock Details",
+      "url": "https://groww.in/stocks/indian-bank"
+    }
+  },
+  {
+    "chunk_id": "stock_indian-bank_industry",
+    "type": "stock",
+    "query_type": "industry_classification",
+    "stock_name": "Indian Bank",
+    "content": "Indian Bank is categorized under the 'Banking - Public Sector' industry sector.",
+    "source_metadata": {
+      "title": "Indian Bank Stock Details",
+      "url": "https://groww.in/stocks/indian-bank"
+    }
+  },
+  {
+    "chunk_id": "stock_indian-bank_overview",
+    "type": "stock",
+    "query_type": "company_overview",
+    "stock_name": "Indian Bank",
+    "content": "About Indian Bank (Company Overview): Indian Bank is a premier public sector bank in India, headquartered in Chennai. It merged with Allahabad Bank in April 2020, significantly expanding its branch footprint and customer base.",
+    "source_metadata": {
+      "title": "Indian Bank Stock Details",
+      "url": "https://groww.in/stocks/indian-bank"
+    }
+  },
+  {
+    "chunk_id": "stock_indian-bank_management",
+    "type": "stock",
+    "query_type": "company_management_data",
+    "stock_name": "Indian Bank",
+    "content": "The corporate management and executive leadership team of Indian Bank includes: SL Jain (Managing Director & CEO), Ashutosh Choudhury (Executive Director), Mahesh Kumar Bajaj (Executive Director).",
+    "source_metadata": {
+      "title": "Indian Bank Stock Details",
+      "url": "https://groww.in/stocks/indian-bank"
+    }
+  },
+  {
+    "chunk_id": "mf_Axis_Bluechip_Factsheet_txt_0",
+    "type": "mutual_fund",
+    "query_type": "expense_ratio",
+    "scheme_name": "Axis Bluechip Fund",
+    "content": "Axis Bluechip Fund - Scheme Name: Axis Bluechip Fund Document: Scheme Information & Factsheet Summary (2026) Asset Management Company: Axis Mutual Fund AMC 1. Expense Ratio: The Total Expense Ratio (TER) charged by the scheme is 0.90% for the Direct Plan and 1.65% for the Regular Plan. This includes the investment management fee and operating administrative expenses. 2. Exit Load: If units are redeemed or switched out within 1 year (365 days) from the date of allotment, an exit load of 1.00% is applicable. No exit load is charged for redemptions made after 1 year (365 days) from the date of allotment. 3. Minimum",
+    "source_metadata": {
+      "title": "Axis Bluechip Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Axis_Bluechip_Factsheet_txt_1",
+    "type": "mutual_fund",
+    "query_type": "exit_load",
+    "scheme_name": "Axis Bluechip Fund",
+    "content": "Axis Bluechip Fund - load is charged for redemptions made after 1 year (365 days) from the date of allotment. 3. Minimum Investment: The minimum application amount required for a Lump Sum investment is ₹5,000 and in multiples of ₹1 thereafter. The minimum SIP (Systematic Investment Plan) amount is ₹500 per month and in multiples of ₹1 thereafter. 4. Lock-in Period: Being an open-ended equity scheme, Axis Bluechip Fund does not have any lock-in period. Investors are free to redeem their units on any business day, subject to applicable exit loads. 5. Riskometer & Risk Classification: The riskometer classification",
+    "source_metadata": {
+      "title": "Axis Bluechip Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Axis_Bluechip_Factsheet_txt_2",
+    "type": "mutual_fund",
+    "query_type": "exit_load",
+    "scheme_name": "Axis Bluechip Fund",
+    "content": "Axis Bluechip Fund - subject to applicable exit loads. 5. Riskometer & Risk Classification: The riskometer classification for Axis Bluechip Fund is categorized as Very High Risk, indicating that investors understand their principal will be at very high risk. 6. Benchmark Index: The scheme's performance and asset allocation are benchmarked against the Nifty 50 TRI (Total Returns Index). 7. Assets Under Management (AUM) & Fund Size: The Assets Under Management (AUM) of the Axis Bluechip Fund is ₹35,820 Crores as of May 31, 2026. The fund is managed under Axis Asset Management Company Limited. 8. Fund Manager",
+    "source_metadata": {
+      "title": "Axis Bluechip Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Axis_Bluechip_Factsheet_txt_3",
+    "type": "mutual_fund",
+    "query_type": "fund_management",
+    "scheme_name": "Axis Bluechip Fund",
+    "content": "Axis Bluechip Fund - as of May 31, 2026. The fund is managed under Axis Asset Management Company Limited. 8. Fund Manager Details: The fund is managed by Mr. Jinesh Gopani, who has been leading the scheme since November 2016. Mr. Gopani holds a Master of Management Studies (MMS) in Finance and has over 20 years of extensive experience in equity research, portfolio management, and financial analysis. 9. Document Access & Statement Downloads: To download the Scheme Information Document (SID), Key Information Memorandum (KIM), or your Consolidated Account Statement (CAS), visit the official Axis Mutual Fund website",
+    "source_metadata": {
+      "title": "Axis Bluechip Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Axis_Bluechip_Factsheet_txt_4",
+    "type": "mutual_fund",
+    "query_type": "document_access",
+    "scheme_name": "Axis Bluechip Fund",
+    "content": "Axis Bluechip Fund - dum (KIM), or your Consolidated Account Statement (CAS), visit the official Axis Mutual Fund website or go to the Groww app under the Mutual Fund Profile & Statements section.",
+    "source_metadata": {
+      "title": "Axis Bluechip Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Axis_Long_Term_Equity_Fund_Factsheet_txt_0",
+    "type": "mutual_fund",
+    "query_type": "expense_ratio",
+    "scheme_name": "Axis Long Term Equity Fund",
+    "content": "Axis Long Term Equity Fund - Scheme Name: Axis Long Term Equity Fund Document: ELSS Scheme Factsheet Summary (2026) Asset Management Company: Axis Mutual Fund AMC 1. Expense Ratio: The Total Expense Ratio (TER) is 0.85% for the Direct Plan and 1.60% for the Regular Plan. 2. Exit Load: There is Nil exit load. However, early redemption is not permitted due to the regulatory lock-in period. 3. Minimum Investment: The minimum application amount is ₹500 and in multiples of ₹500 thereafter for both Lump Sum and SIP investments. 4. Lock-in Period: Axis Long Term Equity Fund is an Equity Linked Savings Scheme (ELSS). It carries",
+    "source_metadata": {
+      "title": "Axis Long Term Equity Fund Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Axis_Long_Term_Equity_Fund_Factsheet_txt_1",
+    "type": "mutual_fund",
+    "query_type": "lock_in",
+    "scheme_name": "Axis Long Term Equity Fund",
+    "content": "Axis Long Term Equity Fund - 4. Lock-in Period: Axis Long Term Equity Fund is an Equity Linked Savings Scheme (ELSS). It carries a mandatory lock-in period of 3 years (36 months) from the date of unit allotment. During this lock-in period, units cannot be redeemed, transferred, or pledged. 5. Riskometer & Risk Classification: Categorized as Very High Risk as per SEBI riskometer guidelines. 6. Benchmark Index: The scheme tracks the Nifty 500 TRI as its official benchmark index. 7. Assets Under Management (AUM) & Fund Size: The Assets Under Management (AUM) of the Axis Long Term Equity Fund is ₹24,600 Crores as of May 31,",
+    "source_metadata": {
+      "title": "Axis Long Term Equity Fund Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Axis_Long_Term_Equity_Fund_Factsheet_txt_2",
+    "type": "mutual_fund",
+    "query_type": "fund_management",
+    "scheme_name": "Axis Long Term Equity Fund",
+    "content": "Axis Long Term Equity Fund - The Assets Under Management (AUM) of the Axis Long Term Equity Fund is ₹24,600 Crores as of May 31, 2026. 8. Fund Manager Details: The fund is managed by Mr. Shreyash Devalkar, who has been managing the portfolio since 2016. He holds a Bachelor of Chemical Engineering and a PGDM, with more than 18 years of capital market experience. 9. Document Access & Statement Downloads: To download your ELSS 80C Tax Investment Proof, Account Statement, or SID, visit the Axis Mutual Fund customer portal or navigate to Groww App > Profile > Tax Statements.",
+    "source_metadata": {
+      "title": "Axis Long Term Equity Fund Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_General_Mutual_Fund_txt_0",
+    "type": "mutual_fund",
+    "query_type": "fund_management",
+    "scheme_name": "General Mutual Fund",
+    "content": "General Mutual Fund - Scheme Name: General Mutual Fund FAQ Document: General Mutual Fund Information & FAQs (2026) Asset Management Company: Groww Mutual Fund 1. Fund Category: The fund category defines the classification of a mutual fund scheme based on its investment style, asset allocation, and market capitalization. Examples include Equity Funds (Large Cap, Mid Cap, Small Cap, ELSS), Debt Funds, Hybrid Funds, and Commodity/Sectoral Funds. 2. Investment Objectives: The investment objectives of a mutual fund scheme describe its financial goals and investment strategy. It outlines what types of assets the fund",
+    "source_metadata": {
+      "title": "General Mutual Fund",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_General_Mutual_Fund_txt_1",
+    "type": "mutual_fund",
+    "query_type": "exit_load",
+    "scheme_name": "General Mutual Fund",
+    "content": "General Mutual Fund - heme describe its financial goals and investment strategy. It outlines what types of assets the fund will invest in (e.g., equity, debt, or gold) and the target outcome, such as long-term capital appreciation or regular income. 3. Exit Load: Exit load is a fee or penalty charged to investors by the Asset Management Company (AMC) if they redeem or switch out of their mutual fund units within a specified period from the date of allotment. For example, some funds charge a 1.00% exit load if redeemed within 1 year or 7 days, while other funds (like ELSS or index funds) may have Nil exit load. 4.",
+    "source_metadata": {
+      "title": "General Mutual Fund",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_General_Mutual_Fund_txt_2",
+    "type": "mutual_fund",
+    "query_type": "exit_load",
+    "scheme_name": "General Mutual Fund",
+    "content": "General Mutual Fund - med within 1 year or 7 days, while other funds (like ELSS or index funds) may have Nil exit load. 4. Minimum Investment & SIP Amount: The minimum investment or Systematic Investment Plan (SIP) amount is the lowest amount required to start investing in a mutual fund scheme. While minimum lump sum investments are often ₹1,000 or ₹5,000, the minimum SIP amount is typically ₹100 or ₹500 per month, depending on the scheme's rules. 5. Lock-in Period for ELSS: Equity Linked Savings Schemes (ELSS) are tax-saving mutual funds under Section 80C of the Income Tax Act. ELSS funds have a mandatory",
+    "source_metadata": {
+      "title": "General Mutual Fund",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_General_Mutual_Fund_txt_3",
+    "type": "mutual_fund",
+    "query_type": "lock_in",
+    "scheme_name": "General Mutual Fund",
+    "content": "General Mutual Fund - SS) are tax-saving mutual funds under Section 80C of the Income Tax Act. ELSS funds have a mandatory regulatory lock-in period of 3 years (36 months) from the date of unit allotment. During this period, investors cannot redeem, switch, or transfer their units. 6. Riskometer & Risk Classification: The riskometer is a standardized graphical tool representation that depicts the level of risk associated with a mutual fund scheme. Under SEBI guidelines, the riskometer ranges across six risk levels: Low, Low to Moderate, Moderate, Moderately High, High, and Very High Risk. 7. Benchmark Index: A",
+    "source_metadata": {
+      "title": "General Mutual Fund",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_General_Mutual_Fund_txt_4",
+    "type": "mutual_fund",
+    "query_type": "benchmark",
+    "scheme_name": "General Mutual Fund",
+    "content": "General Mutual Fund - ls: Low, Low to Moderate, Moderate, Moderately High, High, and Very High Risk. 7. Benchmark Index: A benchmark index is a standard market index (e.g., Nifty 50 TRI, Nifty 500 TRI, NIFTY 100 TRI) that a mutual fund scheme tracks. It is used to compare and evaluate the fund's performance, returns, and asset allocation strategy. 8. Document Access & Mutual Fund Statement Downloads: To download a mutual fund transaction statement or Consolidated Account Statement (CAS), you can navigate to the Groww App under the Mutual Fund Profile & Statements section. Alternatively, you can download statements",
+    "source_metadata": {
+      "title": "General Mutual Fund",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_General_Mutual_Fund_txt_5",
+    "type": "mutual_fund",
+    "query_type": "fund_management",
+    "scheme_name": "General Mutual Fund",
+    "content": "General Mutual Fund - w App under the Mutual Fund Profile & Statements section. Alternatively, you can download statements directly from the Asset Management Company (AMC) official website or request them via KFintech or CAMS portal. 9. Downloading a Capital Gains Statement: To download your capital gains statement for tax filing purposes, open the Groww App, go to your Profile, select Reports or Tax Statements, and choose the Capital Gains Report for the relevant financial year. You can also generate this report directly from the CAMS/KFintech website or the AMC's portal.",
+    "source_metadata": {
+      "title": "General Mutual Fund",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Groww_Large_Cap_Fund_Factsheet_txt_0",
+    "type": "mutual_fund",
+    "query_type": "expense_ratio",
+    "scheme_name": "Groww Large Cap Fund",
+    "content": "Groww Large Cap Fund - Scheme Name: Groww Large Cap Fund Document: Scheme Information & Factsheet Summary (2026) Asset Management Company: Groww Asset Management Company (Groww AMC) 1. Expense Ratio: The Total Expense Ratio (TER) charged by the scheme is 1.38% for the Direct Plan and 2.74% for the Regular Plan. This includes the investment management fee and operating administrative expenses. 2. Exit Load: If units are redeemed or switched out within 7 days from the date of allotment, an exit load of 1.00% is applicable. No exit load is charged for redemptions made after 7 days from the date of allotment. 3.",
+    "source_metadata": {
+      "title": "Groww Large Cap Fund Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Groww_Large_Cap_Fund_Factsheet_txt_1",
+    "type": "mutual_fund",
+    "query_type": "exit_load",
+    "scheme_name": "Groww Large Cap Fund",
+    "content": "Groww Large Cap Fund - applicable. No exit load is charged for redemptions made after 7 days from the date of allotment. 3. Minimum Investment: The minimum application amount required for a Lump Sum investment is ₹1,000. The minimum SIP (Systematic Investment Plan) amount is ₹500 per month. 4. Lock-in Period: Being an open-ended equity scheme, Groww Large Cap Fund does not have any lock-in period. Investors are free to redeem their units on any business day, subject to applicable exit loads. 5. Riskometer & Risk Classification: The riskometer classification for Groww Large Cap Fund is categorized as Very High Risk,",
+    "source_metadata": {
+      "title": "Groww Large Cap Fund Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Groww_Large_Cap_Fund_Factsheet_txt_2",
+    "type": "mutual_fund",
+    "query_type": "risk_classification",
+    "scheme_name": "Groww Large Cap Fund",
+    "content": "Groww Large Cap Fund - sification: The riskometer classification for Groww Large Cap Fund is categorized as Very High Risk, indicating that investors understand their principal will be at very high risk. 6. Benchmark Index: The scheme's performance and asset allocation are benchmarked against the NIFTY 100 TRI (Total Returns Index). 7. Assets Under Management (AUM) & Fund Size: The Assets Under Management (AUM) of the Groww Large Cap Fund is ₹1,250 Crores as of May 31, 2026. The fund is managed under Groww Asset Management Company. 8. Fund Manager Details: The fund is managed by Mr. Anupam Tiwari. Mr. Tiwari holds",
+    "source_metadata": {
+      "title": "Groww Large Cap Fund Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Groww_Large_Cap_Fund_Factsheet_txt_3",
+    "type": "mutual_fund",
+    "query_type": "fund_manager_details",
+    "scheme_name": "Groww Large Cap Fund",
+    "content": "Groww Large Cap Fund - agement Company. 8. Fund Manager Details: The fund is managed by Mr. Anupam Tiwari. Mr. Tiwari holds a PGDM in Finance and has extensive experience in equity research and fund management. 9. Fund Category: Groww Large Cap Fund belongs to the Equity: Large Cap category, investing predominantly in equity and equity-related instruments of large-cap companies. 10. Investment Objectives: The investment objective of the scheme is to generate long-term capital appreciation by investing in a diversified portfolio of large-cap companies. 11. Document Access & Statement Downloads: To download the",
+    "source_metadata": {
+      "title": "Groww Large Cap Fund Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Groww_Large_Cap_Fund_Factsheet_txt_4",
+    "type": "mutual_fund",
+    "query_type": "document_access",
+    "scheme_name": "Groww Large Cap Fund",
+    "content": "Groww Large Cap Fund - rsified portfolio of large-cap companies. 11. Document Access & Statement Downloads: To download the Scheme Information Document (SID), Key Information Memorandum (KIM), or your Consolidated Account Statement (CAS), visit the official Groww Mutual Fund website or go to the Groww app under the Mutual Fund Profile & Statements section.",
+    "source_metadata": {
+      "title": "Groww Large Cap Fund Factsheet",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Parag_Parikh_Flexi_Cap_SID_txt_0",
+    "type": "mutual_fund",
+    "query_type": "expense_ratio",
+    "scheme_name": "Parag Parikh Flexi Cap Fund",
+    "content": "Parag Parikh Flexi Cap Fund - Scheme Name: Parag Parikh Flexi Cap Fund Document: Scheme Information Document Summary (2026) Asset Management Company: PPFAS Mutual Fund AMC 1. Expense Ratio: The scheme's Total Expense Ratio (TER) is 0.70% for the Direct Plan and 1.45% for the Regular Plan, which covers administrative, distributor commission, and fund management expenses. 2. Exit Load: The exit load structure is designed to encourage long-term investing: - Redemption within 365 days (1 year) from allotment: 2.00% - Redemption between 366 days and 730 days (2 years) from allotment: 1.00% - Redemption after 730 days (2",
+    "source_metadata": {
+      "title": "Parag Parikh Flexi Cap Sid",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Parag_Parikh_Flexi_Cap_SID_txt_1",
+    "type": "mutual_fund",
+    "query_type": "exit_load",
+    "scheme_name": "Parag Parikh Flexi Cap Fund",
+    "content": "Parag Parikh Flexi Cap Fund - emption between 366 days and 730 days (2 years) from allotment: 1.00% - Redemption after 730 days (2 years): Nil exit load. 3. Minimum Investment: The minimum initial application amount for Lump Sum is ₹1,000 and in multiples of ₹1 thereafter. The minimum monthly SIP (Systematic Investment Plan) amount is ₹1,000. 4. Lock-in Period: Parag Parikh Flexi Cap Fund has no lock-in period. It is an open-ended dynamic equity scheme investing across large cap, mid cap, and small cap stocks. 5. Riskometer & Risk Classification: The riskometer classification for this scheme is Very High Risk, indicating",
+    "source_metadata": {
+      "title": "Parag Parikh Flexi Cap Sid",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Parag_Parikh_Flexi_Cap_SID_txt_2",
+    "type": "mutual_fund",
+    "query_type": "risk_classification",
+    "scheme_name": "Parag Parikh Flexi Cap Fund",
+    "content": "Parag Parikh Flexi Cap Fund - r & Risk Classification: The riskometer classification for this scheme is Very High Risk, indicating high volatility in the short term. 6. Benchmark Index: The benchmark index for Parag Parikh Flexi Cap Fund is the Nifty 500 TRI (Total Returns Index), which represents a broad-based market coverage. 7. Assets Under Management (AUM) & Fund Size: The Assets Under Management (AUM) is ₹52,400 Crores as of May 31, 2026, managed under PPFAS Asset Management Private Limited. 8. Fund Manager Details: The equity portion is managed by Mr. Rajeev Thakkar, who has been managing the scheme since its",
+    "source_metadata": {
+      "title": "Parag Parikh Flexi Cap Sid",
+      "source_name": "Groww Verified AMC Document"
+    }
+  },
+  {
+    "chunk_id": "mf_Parag_Parikh_Flexi_Cap_SID_txt_3",
+    "type": "mutual_fund",
+    "query_type": "fund_management",
+    "scheme_name": "Parag Parikh Flexi Cap Fund",
+    "content": "Parag Parikh Flexi Cap Fund - ils: The equity portion is managed by Mr. Rajeev Thakkar, who has been managing the scheme since its inception in May 2013. He is a Chartered Accountant (CA) and holds a Chartered Financial Analyst (CFA) charter, with over 25 years of research and fund management experience. 9. Document Access & Statement Downloads: To download scheme pamphlets, KIMs, SIDs, or tax statements, log in to the PPFAS AMC investor portal or access the Groww App dashboard under mutual fund downloads.",
+    "source_metadata": {
+      "title": "Parag Parikh Flexi Cap Sid",
+      "source_name": "Groww Verified AMC Document"
+    }
+  }
+]

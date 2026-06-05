@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+numpy
+beautifulsoup4
+pypdf
+apscheduler
+requests

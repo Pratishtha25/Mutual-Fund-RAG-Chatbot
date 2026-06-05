@@ -1,0 +1,11 @@
+# Problem Statement
+
+Build a Retrieval-Augmented Generation (RAG) based Mutual Fund FAQ Assistant for Groww that answers factual mutual fund-related questions using only official public sources such as AMC websites, AMFI, and SEBI.
+
+The assistant should help users quickly find information about selected mutual fund schemes, including expense ratio, exit load, minimum SIP amount, lock-in period, benchmark index, riskometer classification, fund management data (such as fund manager names, tenure, and qualifications), and statement download procedures. Every response must be concise, fact-based, and include a citation to the official source from which the information was retrieved.
+
+The chatbot must not provide investment advice, fund recommendations, portfolio suggestions, return comparisons, or buy/sell guidance. For advisory or opinion-based queries, it should politely refuse and direct users to official educational resources.
+
+The solution should use a small curated corpus of official mutual fund documents (Factsheets, KIMs, SIDs, FAQs, and regulatory pages) and leverage RAG to retrieve relevant information before generating responses. The system must ensure transparency, accuracy, and user privacy by providing source-backed answers and by not collecting, storing, or processing any personal information such as PAN, Aadhaar, account numbers, phone numbers, email addresses, or OTPs.
+
+The final product should provide a simple user interface with example questions, a facts-only disclaimer, and reliable retrieval of mutual fund information from official sources.

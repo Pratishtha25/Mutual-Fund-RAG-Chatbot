@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / Cache
+.pytest_cache/
+.pytest/
+.cache/
+
+# Local data cache
+backend/data/embeddings.npy
+backend/data/corpus_hash.txt
+backend/data/*.tmp
+backend/data/*.log
+
+# Logs
+*.log

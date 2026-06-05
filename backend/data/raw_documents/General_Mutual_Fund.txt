@@ -1,0 +1,30 @@
+Scheme Name: General Mutual Fund FAQ
+Document: General Mutual Fund Information & FAQs (2026)
+Asset Management Company: Groww Mutual Fund
+
+1. Fund Category:
+The fund category defines the classification of a mutual fund scheme based on its investment style, asset allocation, and market capitalization. Examples include Equity Funds (Large Cap, Mid Cap, Small Cap, ELSS), Debt Funds, Hybrid Funds, and Commodity/Sectoral Funds.
+
+2. Investment Objectives:
+The investment objectives of a mutual fund scheme describe its financial goals and investment strategy. It outlines what types of assets the fund will invest in (e.g., equity, debt, or gold) and the target outcome, such as long-term capital appreciation or regular income.
+
+3. Exit Load:
+Exit load is a fee or penalty charged to investors by the Asset Management Company (AMC) if they redeem or switch out of their mutual fund units within a specified period from the date of allotment. For example, some funds charge a 1.00% exit load if redeemed within 1 year or 7 days, while other funds (like ELSS or index funds) may have Nil exit load.
+
+4. Minimum Investment & SIP Amount:
+The minimum investment or Systematic Investment Plan (SIP) amount is the lowest amount required to start investing in a mutual fund scheme. While minimum lump sum investments are often ₹1,000 or ₹5,000, the minimum SIP amount is typically ₹100 or ₹500 per month, depending on the scheme's rules.
+
+5. Lock-in Period for ELSS:
+Equity Linked Savings Schemes (ELSS) are tax-saving mutual funds under Section 80C of the Income Tax Act. ELSS funds have a mandatory regulatory lock-in period of 3 years (36 months) from the date of unit allotment. During this period, investors cannot redeem, switch, or transfer their units.
+
+6. Riskometer & Risk Classification:
+The riskometer is a standardized graphical tool representation that depicts the level of risk associated with a mutual fund scheme. Under SEBI guidelines, the riskometer ranges across six risk levels: Low, Low to Moderate, Moderate, Moderately High, High, and Very High Risk.
+
+7. Benchmark Index:
+A benchmark index is a standard market index (e.g., Nifty 50 TRI, Nifty 500 TRI, NIFTY 100 TRI) that a mutual fund scheme tracks. It is used to compare and evaluate the fund's performance, returns, and asset allocation strategy.
+
+8. Document Access & Mutual Fund Statement Downloads:
+To download a mutual fund transaction statement or Consolidated Account Statement (CAS), you can navigate to the Groww App under the Mutual Fund Profile & Statements section. Alternatively, you can download statements directly from the Asset Management Company (AMC) official website or request them via KFintech or CAMS portal.
+
+9. Downloading a Capital Gains Statement:
+To download your capital gains statement for tax filing purposes, open the Groww App, go to your Profile, select Reports or Tax Statements, and choose the Capital Gains Report for the relevant financial year. You can also generate this report directly from the CAMS/KFintech website or the AMC's portal.
