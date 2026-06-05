@@ -59,6 +59,39 @@ const sourcesBtn = document.getElementById("sourcesBtn");
 const analyticsBtn = document.getElementById("analyticsBtn");
 const menuItems = document.querySelectorAll(".menu-item");
 
+// Mobile Responsive Elements
+const sidebar = document.getElementById("sidebar");
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const closeSidebarBtn = document.getElementById("closeSidebarBtn");
+const sidebarOverlay = document.getElementById("sidebarOverlay");
+
+// Mobile menu events
+if (mobileMenuBtn && sidebar && sidebarOverlay) {
+    mobileMenuBtn.addEventListener("click", () => {
+        sidebar.classList.add("open");
+        sidebarOverlay.classList.remove("hidden");
+    });
+}
+
+const hideSidebar = () => {
+    if (sidebar && sidebarOverlay) {
+        sidebar.classList.remove("open");
+        sidebarOverlay.classList.add("hidden");
+    }
+};
+
+if (closeSidebarBtn) {
+    closeSidebarBtn.addEventListener("click", hideSidebar);
+}
+if (sidebarOverlay) {
+    sidebarOverlay.addEventListener("click", hideSidebar);
+}
+
+// When a menu item is clicked on mobile, hide the sidebar
+menuItems.forEach(item => {
+    item.addEventListener("click", hideSidebar);
+});
+
 // Modal Elements
 const modalOverlay = document.getElementById("modalOverlay");
 const modalQuestions = document.getElementById("modalQuestions");
