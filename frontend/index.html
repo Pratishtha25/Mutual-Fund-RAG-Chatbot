@@ -13,7 +13,7 @@
 <body>
     <div class="dashboard-layout">
         <!-- Sidebar Panel (Left) -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <div class="fact-engine-logo" style="background-color: var(--mint-green);">
                     <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#0b0f19" stroke-width="2.5">
@@ -26,6 +26,7 @@
                     <h2>Fact Engine</h2>
                     <p>AI Verification</p>
                 </div>
+                <button class="close-sidebar-btn" id="closeSidebarBtn" aria-label="Close Menu">×</button>
             </div>
 
             <nav class="sidebar-menu">
@@ -67,11 +68,21 @@
             </div>
         </aside>
 
+        <!-- Sidebar Mobile Overlay -->
+        <div class="sidebar-overlay hidden" id="sidebarOverlay"></div>
+
         <!-- Main Workspace Panel (Right) -->
         <div class="main-workspace">
             <!-- Top Bar -->
             <header class="workspace-header">
                 <div class="header-left">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Menu">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
+                    </button>
                     <span class="assistant-title">MF Facts Assistant</span>
                 </div>
                 <div class="header-right">
